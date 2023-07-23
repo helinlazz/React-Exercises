@@ -1,6 +1,6 @@
 import React from "react";
 import { Welcome } from "./Welcome";
-import { Age } from "../Age";
+
 
 export class App extends React.Component {
     render () {
@@ -8,7 +8,6 @@ export class App extends React.Component {
 
             <div>
                 <Welcome name="Mirka" />
-                <Age age={25} />
             </div>
         )
     }

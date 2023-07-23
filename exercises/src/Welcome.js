@@ -1,4 +1,5 @@
 import React from "react"
+import { Age } from "./Age"
 
 export class Welcome extends React.Component {
     constructor (props) {
@@ -9,6 +10,7 @@ export class Welcome extends React.Component {
 
             <div>
                 <p>Welcome {this.props.name}!</p>
+                <Age age={25} />
             </div>
         )
     }
