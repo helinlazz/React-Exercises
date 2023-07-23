@@ -2,21 +2,23 @@ import React from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
 export class Counter extends React.Component {
-
     state = {
-        count: initialValue
+        count: this.props.initialValue
+    };
+
+
+    componentDidMount () {
+        this.intervalVar = setInterval(() => {
+            this.setState((state) => ({
+                count: state.count + this.props.incrementedBy
+            }));
+        }, this.props.interval);
     }
 
-    constructor (props) {
-        super(props)
-
-        setInterval(() => {
-            this.setState((state) => {
-                return {
-                    count: state.count + incrementedBy
-                }
-            })
-        }, interval)
+    componentWillUnmount () {
+        if (this.intervalVar) {
+            clearInterval(this.intervalVar)
+        }
     }
 
     render () {
@@ -32,4 +34,4 @@ Counter.defaultProps = {
     initialValue: 0,
     incrementedBy: 1,
     interval: 1000,
-}
+};
