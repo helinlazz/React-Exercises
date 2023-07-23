@@ -10,9 +10,11 @@ export class Welcome extends React.Component {
 
             <div>
                 <p>Welcome {this.props.name}!</p>
-                {this.props.age > 18 && <Age age={25} />}
+                {this.props.age && <Age age={this.props.age} />}
             </div>
         )
     }
 }
+
+
 

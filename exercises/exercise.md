@@ -1,2 +1,2 @@
-Conditional Rendering - If greater than `18`
-Modify the Welcome component so that the Age component is rendered only if the age prop is greater than 18.
+Conditional Rendering - If prop is present
+Modify the Welcome component so that the Age component is rendered only if the age prop is present.
