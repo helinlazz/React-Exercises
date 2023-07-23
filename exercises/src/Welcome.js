@@ -6,11 +6,13 @@ export class Welcome extends React.Component {
         super(props)
     }
     render () {
+        const rangeAge = this.props.age > 18 && this.props.age < 65
+
         return (
 
             <div>
                 <p>Welcome {this.props.name}!</p>
-                {this.props.age > 18 && <Age age={25} />}
+                {rangeAge && <Age age={25} />}
             </div>
         )
     }
