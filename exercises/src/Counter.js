@@ -15,12 +15,6 @@ export class Counter extends React.Component {
         }, this.props.interval);
     }
 
-    componentWillUnmount () {
-        if (this.intervalVar) {
-            clearInterval(this.intervalVar)
-        }
-    }
-
     render () {
         return (
             <div>
