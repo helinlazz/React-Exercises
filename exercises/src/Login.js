@@ -22,12 +22,19 @@ export default function Login () {
         }
     }
 
+    const handleReset = () => {
+        setUsername("");
+        setPassword("");
+
+    }
+
 
     return (
         <>
             <input type="text" value={username} onChange={handleUsername} />
             <input type="password" value={password} onChange={handlePassword} />
             <button onClick={handleLogin}>Login</button>
+            <button onClick={handleReset}>Reset</button>
         </>
     )
 }
