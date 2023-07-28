@@ -1,12 +1,11 @@
 import React from "react";
-import ClickTracker from "./ClickTracker";
-import InteractiveWelcome from "./InteractiveWelcome";
+import Login from "./Login";
 
 
 export default function App () {
     return (
         <>
-            <InteractiveWelcome />
+            <Login />
         </>
 
     )
