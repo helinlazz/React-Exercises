@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Welcome } from "./Welcome";
 
 export default function InteractiveWelcome () {
     const [name, setName] = useState("");
@@ -12,7 +13,7 @@ export default function InteractiveWelcome () {
     return (
         <>
             <input type="text" value={name} onChange={handleInput} />
-            <h3>Welcome {name}!</h3>
+            <Welcome name={<strong>Mrika</strong>} age={25} />
         </>
     )
 }
