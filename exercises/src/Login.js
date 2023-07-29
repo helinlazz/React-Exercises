@@ -1,8 +1,9 @@
 import { useState } from "react"
 
-export default function Login () {
+export default function Login ({ onLogin }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [isDisabled, setDisabled] = useState(true);
 
     const handleUsername = (event) => {
         const usernameElement = event.target.value;
@@ -15,6 +16,8 @@ export default function Login () {
     }
 
     const handleLogin = () => {
+        onLogin({ username, password });
+
         if (username && password) {
             console.log(username, password);
         } else {
@@ -27,7 +30,7 @@ export default function Login () {
         <>
             <input type="text" value={username} onChange={handleUsername} />
             <input type="password" value={password} onChange={handlePassword} />
-            <button onClick={handleLogin}>Login</button>
+            <button disabled={isDisabled} onClick={handleLogin}>Login</button>
         </>
     )
 }
