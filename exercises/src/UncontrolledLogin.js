@@ -15,7 +15,7 @@ export default function UncontrolledLogin () {
     return (
         <>
             <form onSubmit={handleLogin}>
-                <input name="username" />
+                <input name="username" autoFocus />
                 <input name="password" type="password" />
                 <button type="submit">Login</button>
             </form>
