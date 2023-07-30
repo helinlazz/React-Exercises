@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function TodoList () {
+export default function TodoList ({ prop }) {
     const [items, setItems] = useState([]);
     const [input, setInput] = useState("");
 
@@ -29,7 +29,7 @@ export default function TodoList () {
         return (<ul>
             {items.map((item, index) => (
                 <li key={index}>{item}
-                    <button onClick={() => handleRemove(ind)}>Remove</button></li>
+                    <button onClick={() => handleRemove(index)}>Remove</button></li>
             ))}
         </ul>
         )
@@ -45,7 +45,7 @@ export default function TodoList () {
             <input type="text" value={input} onChange={handleInput} />
             <button onClick={handleItem}>Add</button>
             <button onClick={handleReset}>Reset</button>
-            {items.length > 0 && list()}
+            {prop(items, handleRemove)}
         </div>
     );
 }
