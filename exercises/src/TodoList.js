@@ -24,15 +24,16 @@ export default function TodoList () {
         )
     }
 
+    const handleReset = () => {
+        setItems([]);
+    }
+
 
     return (
         <div>
-            <input
-                type="text"
-                value={input}
-                onChange={handleInput}
-            />
+            <input type="text" value={input} onChange={handleInput} />
             <button onClick={handleItem}>Add</button>
+            <button onClick={handleReset}>Reset</button>
             {items.length > 0 && list()}
         </div>
     );
