@@ -1,11 +1,11 @@
 import React from "react";
-import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 
 
 export default function App () {
     return (
         <>
-            <Login />
+            <UncontrolledLogin />
         </>
 
     )
