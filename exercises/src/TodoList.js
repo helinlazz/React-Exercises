@@ -25,16 +25,6 @@ export default function TodoList ({ prop }) {
     }
 
 
-    const list = () => {
-        return (<ul>
-            {items.map((item, index) => (
-                <li key={index}>{item}
-                    <button onClick={() => handleRemove(index)}>Remove</button></li>
-            ))}
-        </ul>
-        )
-    }
-
 
 
 
