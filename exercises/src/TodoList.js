@@ -15,18 +15,29 @@ export default function TodoList () {
         }
     };
 
-    const list = () => {
-        return (<ul>
-            {items.map((item, index) => (
-                <li key={index}>{item}</li>
-            ))}
-        </ul>
-        )
+    const handleRemove = (ind) => {
+        const newItems = items.filter((item, i) => i !== ind);
+        setItems(newItems);
     }
 
     const handleReset = () => {
         setItems([]);
     }
+
+
+    const list = () => {
+        return (<ul>
+            {items.map((item, index) => (
+                <li key={index}>{item}
+                    <button onClick={() => handleRemove(ind)}>Remove</button></li>
+            ))}
+        </ul>
+        )
+    }
+
+
+
+
 
 
     return (
