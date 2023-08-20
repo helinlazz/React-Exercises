@@ -13,7 +13,7 @@ export default function InteractiveWelcome () {
     return (
         <>
             <input type="text" value={name} onChange={handleInput} />
-            <Welcome name={<strong>Mrika</strong>} age={25} />
+            <Welcome name={name} age={25} />
         </>
     )
 }
