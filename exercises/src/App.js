@@ -1,13 +1,12 @@
 import React from "react";
-import GithubUser from "./GithubUser";
-import GithubUserList from "./GithubUserList";
+import UseCounter from "./UseCounter";
+
 
 
 export default function App () {
 };
 return (
     <>
-        <GithubUser username="helinlazz" />
-        <GithubUserList />
+        <UseCounter />
     </>
 );
