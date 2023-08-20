@@ -1,9 +1,12 @@
 import React from "react";
-import Login from "./Login";
+import ClickCounter from "./ClickCounter";
 
 
 export default function App () {
+    const changeCounter = (value) => {
+        console.log(value);
+    };
     return (
-        <Login />
+        <ClickCounter onCounterChange={changeCounter} />
     );
 }
