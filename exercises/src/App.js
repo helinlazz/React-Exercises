@@ -1,5 +1,6 @@
 import React from "react";
-import UseCounter from "./UseCounter";
+import GithubUser from "./GithubUser";
+
 
 
 
@@ -7,6 +8,6 @@ export default function App () {
 };
 return (
     <>
-        <UseForm />
+        <GithubUser username="helinlazz" />
     </>
 );
