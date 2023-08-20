@@ -8,12 +8,14 @@ export default function Login ({ onLogin }) {
     const handleUsername = (event) => {
         const usernameElement = event.target.value;
         setUsername(usernameElement);
-    }
+        setDisabled(!usernameElement || !password);
+    };
 
     const handlePassword = (event) => {
         const passwordElement = event.target.value;
         setPassword(passwordElement);
-    }
+        setDisabled(!username || !passwordElement);
+    };
 
     const handleLogin = () => {
         onLogin({ username, password });
