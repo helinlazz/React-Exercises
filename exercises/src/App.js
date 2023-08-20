@@ -1,12 +1,9 @@
 import React from "react";
-import ClickCounter from "./ClickCounter";
+import GithubUser from "./GithubUser";
 
 
 export default function App () {
-    const changeCounter = (value) => {
-        console.log(value);
-    };
-    return (
-        <ClickCounter />
-    );
-}
+};
+return (
+    <GithubUser username="helinlazz" />
+);
