@@ -1,6 +1,6 @@
 import { FilteredList } from "./UseMemo";
 
-export function App () {
+export default function App () {
 
     const nomi = [
         { name: 'pino', id: 1, age: 20 },
