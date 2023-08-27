@@ -1,17 +1,13 @@
-import { FilteredList } from "./UseMemo";
+import { Route, Routes } from 'react-router-dom'
+import Counter from './Counter'
 
-export function App () {
-
-    const nomi = [
-        { name: 'pino', id: 1, age: 20 },
-        { name: 'maria', id: 2, age: 17 },
-        { name: 'carlo', id: 3, age: 13 },
-        { name: 'letizia', id: 5, age: 34 }
-    ]
+export default function App () {
 
     return (
         <div>
-            <FilteredList list={nomi} />
+            <Routes>
+                <Route path="/counter" element={<Counter />} />
+            </Routes>
         </div>
     )
 }
