@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { HookCounter } from "./counter";
+import Counter from "./Counter";
 
-export function App () {
+export default function App () {
 
     const [numbers, setNumbers] = useState({
         plus: 1,
@@ -23,7 +23,7 @@ export function App () {
 
     return (
         <div>
-            <HookCounter initialVal={numbers.reset} incrementVal={numbers.plus} decrementVal={numbers.minus} />
+            <Counter initialVal={numbers.reset} incrementVal={numbers.plus} decrementVal={numbers.minus} />
             <input type='number' name='plus' value={numbers.plus} onChange={handleChange} />
             <input type='number' name='minus' value={numbers.minus} onChange={handleChange} />
             <input type='number' name='reset' value={numbers.reset} onChange={handleChange} />
