@@ -1,24 +1,32 @@
-import React, { useState } from "react";
-import { LanguageContext } from "./LanguageContext";
-import { Welcome } from "./Welcome";
+import { useEffect, useState } from "react";
+import { HookCounter } from "./counter";
 
 export function App () {
 
-    const [language, setLanguage] = useState('eng')
+    const [numbers, setNumbers] = useState({
+        plus: 1,
+        minus: 1,
+        reset: 0,
+    })
 
-    function handleChangeLanguage (event) {
-        setLanguage(event.target.value)
+    const handleChange = (event) => {
+        const { name, value } = event.target
+        setNumbers((numbers) => {
+            return {
+                ...numbers,
+                [name]: value
+            }
+        })
     }
+
+    console.log(numbers)
 
     return (
         <div>
-            <select value={language} onChange={handleChangeLanguage}>
-                <option value='eng'>english</option>
-                <option value='ita'>italian</option>
-            </select>
-            <LanguageContext.Provider value={language}>
-                <Welcome language={language} />
-            </LanguageContext.Provider>
+            <HookCounter initialVal={numbers.reset} incrementVal={numbers.plus} decrementVal={numbers.minus} />
+            <input type='number' name='plus' value={numbers.plus} onChange={handleChange} />
+            <input type='number' name='minus' value={numbers.minus} onChange={handleChange} />
+            <input type='number' name='reset' value={numbers.reset} onChange={handleChange} />
         </div>
     )
 }
