@@ -1,7 +1,7 @@
 import React from "react";
 import { DisplayLanguage } from "./HookDisplayLanguage";
 
-export function Welcome ({ language }) {
+export default function Welcome ({ language }) {
 
     return (
         <div>

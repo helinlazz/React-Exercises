@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { LanguageContext } from "./LanguageContext";
 
-export function DisplayLanguage () {
+export default function DisplayLanguage () {
 
     const language = useContext(LanguageContext)
 

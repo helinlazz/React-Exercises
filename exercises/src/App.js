@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { LanguageContext } from "./LanguageContext";
 import { Welcome } from "./Welcome";
 
-export function App () {
+export default function App () {
 
     const [language, setLanguage] = useState('eng')
 
-    function handleChangeLanguage (event) {
+    const handleChangeLanguage = (event) => {
         setLanguage(event.target.value)
     }
 
