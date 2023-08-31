@@ -11,6 +11,9 @@ export default function Welcome () {
             <Link to="/Counter">Count with me</Link>
             <br />
             <Link to="/Login">Write your name and password</Link>
+            <br />
+            <Link to="/GithubUserList">Search</Link>
+
         </div>
     );
 }

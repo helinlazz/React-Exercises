@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { Link } from "react-router-dom"
 
 export default function CarDetails ({ initialVal }) {
     const refModel = useRef();
@@ -12,17 +13,21 @@ export default function CarDetails ({ initialVal }) {
     }, [initialVal]);
 
     return (
-        <form>
-            <label>Model:</label>
-            <input id='model' name='model' ref={refModel} />
+        <>
+            <form>
+                <label>Model:</label>
+                <input id='model' name='model' ref={refModel} />
 
-            <label>Year:</label>
-            <input id='year' name='year' ref={refYear} />
+                <label>Year:</label>
+                <input id='year' name='year' ref={refYear} />
 
-            <label>Color:</label>
-            <input id='color' name='color' ref={refColor} />
+                <label>Color:</label>
+                <input id='color' name='color' ref={refColor} />
 
-            <input type="submit" value="Submit" />
-        </form>
+                <input type="submit" value="Submit" />
+            </form>
+            <Link to="/"> Go back </Link >
+        </>
+
     );
 }

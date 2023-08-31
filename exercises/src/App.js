@@ -14,6 +14,7 @@ export default function App () {
                 <Route path="/CarDetails" element={<CarDetails />}></Route>
                 <Route path="/Login" element={<Login />}></Route>
                 <Route path="/*" element={<NotFound />}></Route>
+                <Route path="/GithubUserList" element={<GithubUserList />} />
             </Routes>
         </div>
     )
