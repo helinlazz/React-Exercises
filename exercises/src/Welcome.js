@@ -10,7 +10,7 @@ export default function Welcome () {
             <br />
             <Link to="/counter">Count with me</Link>
             <br />
-            <Link to="/Login">Write your name and password</Link>
+            <Link to="/login">Write your name and password</Link>
         </div>
     );
 }
