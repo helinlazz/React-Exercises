@@ -3,7 +3,7 @@ import { useGetGithubUser } from "./UseGithubUser"
 
 export default function GetGithubUser () {
 
-    const { username } = useParams()
+    const { username = "username" } = useParams()
 
     const { data, loading, error } = useGetGithubUser(username)
 
