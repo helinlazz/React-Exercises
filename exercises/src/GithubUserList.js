@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { GithubUser } from "./GithubUser";
 
 export function FetchGithubUserList () {
@@ -17,6 +17,7 @@ export function FetchGithubUserList () {
                 <input name='username' type='text' value={user} onChange={handleInputChange} />
             </form>
             <Link to="/users" element={<GithubUser />}>search</Link>
+            <Outlet />
         </div>
     )
 }

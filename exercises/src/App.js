@@ -15,7 +15,9 @@ export default function App () {
                 <Route path="/CarDetails" element={<CarDetails />}></Route>
                 <Route path="/Login" element={<Login />}></Route>
                 <Route path="/*" element={<NotFound />}></Route>
-                <Route path="/GithubUserList" element={<FetchGithubUserList />} />
+                <Route path="/GithubUserList" element={<FetchGithubUserList />}>
+                    <Route index element={<h5>Add a user and select it</h5>} />
+                </Route>
             </Routes>
         </div>
     )
